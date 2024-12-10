@@ -1,4 +1,16 @@
-export const subjectsByTrack = {
+import type { HighSchoolTrack, Subject } from "../types";
+
+
+
+export interface TrackSubjects {
+  [key: string]: any[];
+}
+
+export interface YearSubjects {
+  [key: string]: any;
+}
+
+export const subjectsByTrack: any = {
    first: {
      Semester_1: [
        { en: "Math", ar: "الرياضيات" },
@@ -6,8 +18,7 @@ export const subjectsByTrack = {
        { en: "The Holy Quran and Interpretation", ar: "القرآن الكريم وتفسيره" },
        { en: "Arabic Language", ar: "كفايات لغوية" },
        { en: "Biology", ar: "علم الأحياء" },
-       { en: "Digital Technology", ar: "التقنية الرقمية" },
-       { en: "Critical Thinking", ar: "التفكير النقدي" },
+       { en: "Digital Technology", ar: "التقنية الرقمية" },        
      ],
      Semester_2: [
        { en: "Math", ar: "الرياضيات" },
@@ -154,7 +165,7 @@ export const subjectsByTrack = {
          { en: "Hadith", ar: "الحديث" },
          { en: "Holy Quran", ar: "القرآن الكريم" },
          { en: "Arabic Language", ar: "كفايات لغوية" },
-         { en: "Elective", ar: "اختياري" },
+         { en: "Elective", ar: "اختياري", elective: true },
          { en: "Digital Technology", ar: "التقنية الرقمية" },
          { en: "English", ar: "اللغة الإنجليزية" },
          { en: "PE", ar: "التربية البدنية" },
@@ -162,7 +173,7 @@ export const subjectsByTrack = {
        Semester_2: [
          { en: "Tawhid", ar: "التوحيد" },
          { en: "Holy Quran", ar: "القرآن الكريم" },
-         { en: "Elective", ar: "اختياري" },
+         { en: "Elective", ar: "اختياري", elective: true },
          { en: "Arabic Language", ar: "كفايات لغوية" },
          { en: "Digital Technology", ar: "التقنية الرقمية" },
          { en: "History", ar: "التاريخ" },
@@ -192,7 +203,7 @@ export const subjectsByTrack = {
          { en: "Mathematics", ar: "الرياضيات" },
          { en: "Physics", ar: "الفيزياء" },
          { en: "Digital Technology", ar: "التقنية الرقمية" },
-         { en: "Elective", ar: "اختياري" },
+         { en: "Elective", ar: "اختياري", elective: true },
          { en: "Itqan", ar: "حصص إتقان" },
        ],
        Semester_2: [
@@ -203,7 +214,7 @@ export const subjectsByTrack = {
          { en: "Physics", ar: "الفيزياء" },
          { en: "Digital Citizenship", ar: "المواطنة الرقمية" },
          { en: "Earth and Space Sciences", ar: "علوم الأرض والفضاء" },
-         { en: "Elective", ar: "اختياري" },
+         { en: "Elective", ar: "اختياري", elective: true },
          { en: "Itqan", ar: "حصص إتقان" },
        ],
        Semester_3: [
@@ -216,7 +227,7 @@ export const subjectsByTrack = {
            ar: "الدراسات النفسية والاجتماعية",
          },
          { en: "Earth and Space Sciences", ar: "علوم الأرض والفضاء" },
-         { en: "Elective", ar: "اختياري" },
+         { en: "Elective", ar: "اختياري", elective: true },
          { en: "Itqan", ar: "حصص إتقان" },
        ],
      },
@@ -356,7 +367,7 @@ export const subjectsByTrack = {
          { en: "Mathematics", ar: "الرياضيات" },
          { en: "Physics", ar: "الفيزياء" },
          { en: "Digital Technology", ar: "التقنية الرقمية" },
-         { en: "Elective", ar: "اختياري" },
+         { en: "Elective", ar: "اختياري", elective: true },
          { en: "Itqan", ar: "حصص إتقان" },
        ],
        Semester_2: [
@@ -367,7 +378,7 @@ export const subjectsByTrack = {
          { en: "Physics", ar: "الفيزياء" },
          { en: "Digital Citizenship", ar: "المواطنة الرقمية" },
          { en: "Earth and Space Sciences", ar: "علوم الأرض والفضاء" },
-         { en: "Elective", ar: "اختياري" },
+         { en: "Elective", ar: "اختياري", elective: true },
          { en: "Itqan", ar: "حصص إتقان" },
        ],
        Semester_3: [
@@ -380,9 +391,10 @@ export const subjectsByTrack = {
            ar: "الدراسات النفسية والاجتماعية",
          },
          { en: "Earth and Space Sciences", ar: "علوم الأرض والفضاء" },
-         { en: "Elective", ar: "اختياري" },
+         { en: "Elective", ar: "اختياري", elective: true },
          { en: "Itqan", ar: "حصص إتقان" },
        ],
      },
    },
  };
+ 

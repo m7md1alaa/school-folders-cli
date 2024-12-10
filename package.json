@@ -1,9 +1,13 @@
 {
-  "name": "school-folder-cli",
   "author": "Mohammed alaa",
+  "name": "school-folder-cli",
   "version": "1.0.0",
-  "description": "Create web application with the t3 stack",
   "license": "MIT",
+  "description": "CLI tool for creating organized folder structures for educational purposes",
+  "type": "module",
+  "bin": {
+    "school-folder": "./dist/index.js"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/m7md1alaa/school-folders-cli"
@@ -12,23 +16,27 @@
     "create-School-folders",
     "School-creator"
   ],
-  "exports": "./dist/index.js",
-  "module": "index.ts",
-  "type": "module",
-  "devDependencies": {
-    "@types/bun": "latest"
-  },
-  "peerDependencies": {
-    "typescript": "^5.0.0"
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "tsx src/index.ts",
+    "test": "vitest",
+    "prepare": "npm run build"
   },
   "dependencies": {
-    "@clack/core": "^0.3.4",
-    "@clack/prompts": "^0.7.0",
-    "@inquirer/prompts": "^5.5.0",
-    "@types/fs-extra": "^11.0.4",
-    "commander": "^12.1.0",
-    "execa": "^9.3.1",
-    "fs-extra": "^11.2.0",
-    "ora": "^8.1.0"
+    "@inquirer/prompts": "^3.3.0",
+    "commander": "^11.1.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.4",
+    "tsx": "^4.6.2",
+    "typescript": "^5.7.2",
+    "vitest": "^1.0.4"
+  },
+  "engines": {
+    "node": ">=16"
   }
 }
